@@ -1,0 +1,133 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    background: #FDE3A7;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+    transition: 1s;
+    background: #e0e1dc;
+    color: #013243;
+  }
+
+  .card:hover {
+    transform: perspective(2000px) rotate(15deg) scale(1.2);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+  }
+
+  .card:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #BAC1BA;
+    transform: skewX(-45deg);
+  }
+
+  .card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #92A29C;
+    transform: skewY(-45deg);
+  }
+
+  .imgBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: .7s;
+    z-index: 2;
+  }
+
+  .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bark {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: .7s;
+  }
+
+  .card:hover .imgBox {
+    transform: rotateY(-135deg);
+  }
+
+  .card:hover .bark {
+    background: rgba(224, 225, 220, 1);
+    box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+  }
+
+  .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 4px;
+  }
+
+  .details h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .color1 {
+    color: rgb(255, 128, 128);
+  }
+
+  .color2 {
+    color: rgb(115, 115, 255);
+  }
+
+  .details p {
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 0;
+    transform: rotate(-2deg);
+  }
+
+  .text-right {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  video {
+    margin-top: 10px;
+    width: 200px;
+    height: 100px; 
+    border-radius: 20px; 
+    object-fit: cover; 
+  }
+  
